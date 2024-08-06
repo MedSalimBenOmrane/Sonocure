@@ -1,0 +1,104 @@
+
+<body>
+    <div class="container">
+        <div class="blobs">
+          <div class="blob a"></div>
+          <div class="blob b"></div>
+          <div class="blob c"></div>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="container2">
+              <form>
+                <h1 class="titre">Tumor <span class="respon">Detection</span></h1>
+                <div class="form-row">
+                  <div class="col-5">Upload IRM Image:</div>
+                  <div class="col-2">
+                    <div class="input-div">
+                      <input class="input" name="file" type="file">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                        <polyline points="16 16 12 12 8 16"></polyline>
+                        <line y2="21" x2="12" y1="12" x1="12"></line>
+                        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                        <polyline points="16 16 12 12 8 16"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <button class="btn">
+                      <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                        <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                      </svg>
+                      <span class="text">Generate</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-5">Tumor Location :</div>
+                  <div class="col-7">
+                    
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-5">Tumor Size :</div>
+                  <div class="col-7">
+                   
+                  </div>
+                </div>
+
+                <div class="form-row">
+                   
+                    <div class="col-8">
+                        <div class="searchInput">
+                            <input type="text" [(ngModel)]="userInput" (keyup)="onKeyUp()" placeholder="patient Name">
+                            <div class="resultBox" *ngIf="showSuggestions">
+                              <ul>
+                                <li *ngFor="let suggestion of filteredSuggestions" (click)="selectSuggestion(suggestion)">
+                                  {{ suggestion }}
+                                </li>
+                              </ul>
+                            </div>
+                           
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <button class="Btn2">
+    
+                            <div class="sign2">+</div>
+                            
+                            <div class="text3">Create</div>
+                          </button>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-9">
+                        <button class="button4">
+                          <svg
+                            height="24"
+                            width="24"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                              d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                          <span>Submit</span>
+                        </button>
+                        </div>
+                    <div class="col-7">
+                     
+                    </div>
+                  </div>
+
+
+              </form>
+            </div>
+            <div class="container3"><app-image-magnifier></app-image-magnifier></div>
+          </div>
+        </div>
+      </div>
+</body>

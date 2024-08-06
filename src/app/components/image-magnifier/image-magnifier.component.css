@@ -1,0 +1,32 @@
+#featured {
+    width: 99%; /* Remplit le conteneur */
+    height: 99%; /* S'assure que l'image prend toute la hauteur du conteneur */
+    cursor: pointer;
+    border: 2px solid black;
+    object-fit: cover; /* Remplir le conteneur en maintenant le rapport d'aspect */
+    border-radius: 16px;
+    padding-top: 1%;
+}
+
+.arrow:hover {
+    opacity: .5;
+    width: 35px;
+    height: 35px;
+}
+
+#img-container {
+    z-index: 3;
+    width: 100%; /* Utiliser 100% pour remplir le conteneur */
+    height: 100%; /* Utiliser 100% pour remplir le conteneur */
+    position: relative;
+}
+
+#lens {
+    z-index: 2;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 2px solid rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    cursor: none;
+}

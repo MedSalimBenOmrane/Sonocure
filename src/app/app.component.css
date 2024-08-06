@@ -1,0 +1,22 @@
+body {
+    background-color: #14162E;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  app-navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #14162E; /* Assurez-vous que la couleur de fond est cohérente */
+    z-index: 1000; /* Assurez-vous que la barre de navigation est au-dessus des autres éléments */
+  }
+
+  app-detection {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
