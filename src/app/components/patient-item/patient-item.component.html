@@ -1,0 +1,65 @@
+<!-- https://www.youtube.com/watch?v=NuYMMNK4wzA -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<body>
+    <div class="container">
+        <div class="blobs">
+            <div class="blob a"></div>
+            <div class="blob b"></div>
+            <div class="blob c"></div>
+        </div>
+        <div class="content">
+            
+            <div class="row">
+               
+                <div class="card COL-4">
+                    <div class="text">
+                        <h1 style="color: antiquewhite; ">Medical sheet</h1>
+                        <img [src]="'/assets/images/' + patient.gender + '.png'" alt="">
+                        <h3>{{patient.name}}</h3>
+                        <p></p>
+
+                        <div class="row pt-5 ">
+                            <div class="col-6">ID: {{patient.id}}</div>
+                            <div class="col-6">Age :{{patient.age}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">Gender: {{patient.gender}}</div>
+                            <div class="col-6">Tel :{{patient.tel}}</div>
+
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+                  
+
+
+                    
+                    
+               
+
+            </div>
+            
+
+            <div class="seances">
+                <div *ngFor="let seance of seancesDetection; let i = index" class="seance">
+                    <h3>Seance {{ i + 1 }} : Detection</h3>
+                    <app-item-seance-detecion [seance]="seance"></app-item-seance-detecion>
+                </div>
+                <div *ngFor="let seanceT of seancesTraitement; let i = index" class="seance">
+                    <h3>Seance {{ i + 1 }} : Traitement</h3>
+                    <app-item-seance-treatment [seance]="seanceT"></app-item-seance-treatment>
+                </div>
+            </div>
+        
+               
+        </div>
+        
+    </div>
+    
+
+
+</body>

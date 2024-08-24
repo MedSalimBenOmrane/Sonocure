@@ -1,4 +1,16 @@
-<div id="img-container">
-    <div id="lens"></div>
-    <img #featured src="assets/images/irm.jpg" id="featured" />
-</div>
+<div *ngIf="pathImage; else noImageTemplate" id="img-container">
+<!--<div id="lens"></div>-->
+    <img 
+      #featured 
+      [src]="pathImage" 
+      alt="Magnified Image" 
+      id="featured" 
+    />
+  </div>
+  <ng-template #noImageTemplate>
+   
+    <div class="no-image-container">
+      <img src="assets/images/no-image.png" alt="No Image Available" />
+    </div>
+  </ng-template>
+  

@@ -1,9 +1,6 @@
 body {
     background-color: #14162E;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ 
   }
 
   app-navbar {
@@ -19,4 +16,8 @@ body {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
+  }
+
+  .pages{
+    position: fixed;
   }

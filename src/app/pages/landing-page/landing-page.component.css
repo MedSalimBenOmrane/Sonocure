@@ -131,11 +131,11 @@ header {
 }
 
 .text {
-    width: 40%;
+    width: 50%;
 }
 
 .titre {
-    font-size: 50px;
+    font-size: 45px;
     color: azure;
 }
 
@@ -164,7 +164,7 @@ header {
 
 
 .btn {
-margin :5%;
+margin :6%;
 margin-left: 10%;
   display: flex;
   justify-content: center;

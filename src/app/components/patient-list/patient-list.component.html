@@ -1,0 +1,85 @@
+<main class="table" id="customers_table">
+    <section class="table__header">
+      <h1>Patients List</h1>
+      <div class="col-2">
+        <button class="Btn2" onclick="window.dialog.showModal();">
+
+            <div class="sign2">+</div>
+            
+            <div class="text3">Create</div>
+          </button>
+    </div>
+    </section>
+    <section class="table__body">
+      <table>
+        <thead>
+          <tr>
+            <th (click)="sortTable('id', true)">Id <span class="icon-arrow">&UpArrow;</span></th>
+            <th (click)="sortTable('name', true)">Name <span class="icon-arrow">&UpArrow;</span></th>
+           
+            <th (click)="sortTable('age', true)">Age <span class="icon-arrow">&UpArrow;</span></th>
+            <th (click)="sortTable('gender', true)">Gender <span class="icon-arrow">&UpArrow;</span></th>
+            <th (click)="sortTable('tel', true)">Tel <span class="icon-arrow">&UpArrow;</span></th>
+            <th (click)="sortTable('tumorType', true)">Tumor Type <span class="icon-arrow">&UpArrow;</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients"  (click)="details(patient.id)">
+            <td>{{ patient.id }}</td>
+            <td><img [src]="'/assets/images/' + patient.gender + '.png'" alt="">{{ patient.name }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.gender }}</td>
+            <td>{{ patient.tel }}</td>
+            <td>{{ patient.tumorType }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <dialog id="dialog">
+      <h2>Create New Patient</h2>
+      <div class="row">
+          <div class="col-5">
+              Name :
+          </div>
+          <div class="col-7">
+              <input class="input5" placeholder="Name"  [(ngModel)]="Name">
+          </div>
+      </div>
+    
+    <div class="row">
+      <div class="col-5">
+          Age :
+      </div>
+      <div class="col-7">
+          <input class="input5" placeholder="age"  [(ngModel)]="Age">
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      Gender:
+    </div>
+    <div class="col-7">
+      <select class="input5" [(ngModel)]="gender">
+        <option value="" disabled selected>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-5">
+      Tel :
+  </div>
+  <div class="col-7">
+      <input class="input5" placeholder="Tel"  [(ngModel)]="Tel">
+  </div>
+</div>
+<div class="row">
+<button class="boton-elegante" (click)="addPatient()" onclick="window.dialog.close();">Add Patient</button>
+  </div>
+
+
+      <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+  </dialog>
+  </main>
+  

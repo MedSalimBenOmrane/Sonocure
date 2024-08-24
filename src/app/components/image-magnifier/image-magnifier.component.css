@@ -5,7 +5,7 @@
     border: 2px solid black;
     object-fit: cover; /* Remplir le conteneur en maintenant le rapport d'aspect */
     border-radius: 16px;
-    padding-top: 1%;
+
 }
 
 .arrow:hover {
@@ -20,12 +20,22 @@
     height: 100%; /* Utiliser 100% pour remplir le conteneur */
     position: relative;
 }
+.no-image-container{
+    z-index: 3;
+    width: 100%; /* Utiliser 100% pour remplir le conteneur */
+    height: 100%; /* Utiliser 100% pour remplir le conteneur */
+    position: relative;
+    margin: 20%;
+    margin-left: 30%;
+
+}
 
 #lens {
-    z-index: 2;
+    z-index: 1000;
     position: absolute;
     height: 150px;
     width: 150px;
+    border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     background-repeat: no-repeat;
     cursor: none;

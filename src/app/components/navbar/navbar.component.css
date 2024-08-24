@@ -221,3 +221,11 @@ header {
   .Logout{
     color: red;
   }
+.button.active-button,
+.Btn.active-button {
+    background-color: #191fce67; /* Change this to the desired color */
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px 10px 2px 2px;
+    color: rgba(255, 255, 255, 0.589); /* Ensure the text is readable */
+}

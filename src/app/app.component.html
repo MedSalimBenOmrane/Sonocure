@@ -1,5 +1,5 @@
 <body>
-  <app-navbar></app-navbar>
-  <app-detection></app-detection>
-
+<app-navbar *ngIf="show"></app-navbar>
+<router-outlet></router-outlet>
+<app-bot *ngIf="show"></app-bot>
 </body>

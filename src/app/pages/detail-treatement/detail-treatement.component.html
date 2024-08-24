@@ -1,0 +1,48 @@
+<body>
+    <div class="container">
+        <div class="blobs">
+          <div class="blob a"></div>
+          <div class="blob b"></div>
+          <div class="blob c"></div>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="container2">
+             
+                <h1 class="titre">Tumor <span class="respon">Treatment</span></h1>
+
+                <div class="form-row">
+                    <div class="col-7">Frequency (MHZ):</div>
+                    <div class="col-5">
+                      {{seance.frequency}}
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-7"> Intensity (W/cm2):</div>
+                    <div class="col-5">
+                      {{seance.intensity}}
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-7">Duration (second) :</div>
+                    <div class="col-5">
+                      {{seance.duration}}
+                    </div>
+                  </div>
+                  <div class="form-row">
+                  
+                    <button class="boton-elegante">Save in medical sheet</button>
+                  </div>
+                
+                
+            </div>
+            <div class="container3">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="assets/vid/simulation.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>

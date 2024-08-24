@@ -1,0 +1,246 @@
+.button {
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  .button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  /* CSS Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+    --vs-primary: 29, 92, 255;
+}
+
+/* Dialog Styles */
+dialog {
+    padding: 1rem 3rem;
+    background: #c7c7c7cd;
+    max-width: 100%;
+    margin: auto; /* Center the dialog */
+    padding: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    border: 0;
+    color: black;
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+}
+
+dialog::backdrop {
+    animation: fadeIn 1s ease both;
+    background: rgba(89, 89, 89, 0.127);
+    z-index: 2;
+    backdrop-filter: blur(7px);
+}
+
+.x {
+    filter: grayscale(1);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    transition: ease filter, transform 0.3s;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.x:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.col-5 {
+    flex: 0 0 40%;
+}
+
+.col-7 {
+    flex: 0 0 60%;
+}
+
+.input5 {
+    border: 2px solid transparent;
+    width: 100%; /* Ensure the input takes full width */
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.input5:hover,
+.input5:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgba(74, 157, 236, 0.2);
+    background-color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* From Uiverse.io by iZOXVL */ 
+.boton-elegante {
+  padding: 15px 30px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #9698ff;
+  background: #7f6dcf;
+}
+
+.container5{
+
+}
+  
+/* Styles for the dialog */
+dialog {
+    padding: 1rem 3rem;
+    background: #c7c7c7cd;
+    width: 80%; /* Reduce the max width for better alignment */
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    border: 0;
+    color: black;
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+}
+
+.row.container4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details-container {
+    flex: 1;
+    padding-right: 2rem; /* Space between details and magnifier */
+}
+
+.magnifier-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensuring the ImageMagnifier fits well within its container */
+app-image-magnifier {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Keep the image aspect ratio */
+}
+.container3 {
+  
+    height: 60%;
+    color: #ffd0f3;
+    flex: 1; /* Utilise tout l'espace disponible */
+    z-index: 3;
+    margin-left: 2%;
+    box-sizing: border-box;
+  }
+  .no-image-container{
+    z-index: 3;
+    width: 100%; /* Utiliser 100% pour remplir le conteneur */
+    height: 100%; /* Utiliser 100% pour remplir le conteneur */
+    position: relative;
+    margin: 20%;
+    margin-left: 30%;
+  
+  }
+
+  /* Customize the scrollbar */
+  dialog::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    z-index: 200;
+  }
+  
+  dialog::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: rgba(17, 2, 2, 0.377);
+    visibility: hidden;
+    z-index: 200;
+  }
+  
+  dialog:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+    z-index: 200;
+  }
+
+ 

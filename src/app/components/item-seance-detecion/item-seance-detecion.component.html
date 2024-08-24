@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-9">
+        <div class="row">
+            <div>id: {{ seance.id }}</div>
+            <div>dateSeance: {{ seance.dateSeance | date: 'yyyy-MM-dd' }}</div>
+        </div>
+    </div>
+    <div class="col-3">
+        <button class="button" (click)="openDialog()">Details</button>
+    </div>
+</div>
+
+<dialog #dialogRef>
+    <h2>Detection</h2>
+    <div class="row container4">
+        <div class="col-6">
+            <div *ngIf="!imagePath" class="container3">
+                <div class="no-image-container">
+                    <img src="assets/images/no-image.png" alt="No Image Available" />
+                </div>
+            </div>
+            <div *ngIf="imagePath" class="container3">
+                <app-image-magnifier [pathImage]="imagePath"></app-image-magnifier>
+            </div>
+        </div>
+        <div class="col-5">
+            <div>seance id : {{ seance.id }}</div>
+            <div>seance Date : {{ seance.dateSeance | date: 'yyyy-MM-dd' }}</div>
+            <div>tumorLocation: {{ seance.tumorLocation }}</div>
+            <div>tumorSize: {{ seance.tumorSize }}</div>
+            <div>frequency: {{ seance.frequency }}</div>
+            <div>intensity: {{ seance.intensity }}</div>
+            <div>duration: {{ seance.duration }}</div>
+            <div>idImage: {{ seance.idImage }}</div>
+        </div>
+    </div>
+    <button (click)="closeDialog()" aria-label="close" class="x">❌</button>
+</dialog>

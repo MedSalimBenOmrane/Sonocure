@@ -1,0 +1,60 @@
+<main>
+<div id="scaled-container" >
+   
+    <div id="canvas" [class.fight-mode]="isFightMode" >
+        
+        <div id="sketch-board" (click)="fnshowchat()">
+     
+            <div id="head">
+                <div id="lens">
+                    <div id="upper-shadow"> </div>
+                    <div id="rect"></div>
+                    <div id="eyes"></div>
+                </div>
+            </div>
+            <div id="ear">
+                <div id="ear-antenna"></div>
+            </div>
+            <div id="small-cap"></div>
+            <div id="body">
+                
+                <div id="shadow-box"></div>
+                <div id="pocket-area">
+                    <div id="pocket"> </div>
+                </div>
+            </div>
+            <div id="hands">
+                <div class="hand"></div>
+                <div class="hand"></div>
+            </div>
+     
+        </div>
+        <div id="robot-shadow"></div>
+   
+    </div>
+
+</div>
+
+
+    <div  id="scaled-container2" [hidden]="!showchat">
+<div class="chat">
+    <div class="chat-title">
+      <h1>IGNITE</h1>
+      <h2>TEAM 6</h2>
+      <figure class="avatar">
+        <img src="assets/images/bot.png" />
+      </figure>
+    </div>
+    <div class="messages" #messagesContainer>
+      <!-- Messages will be dynamically inserted here -->
+    </div>
+    <div class="message-box">
+      <textarea type="text" class="message-input" placeholder="Type message..." [(ngModel)]="messageInput"></textarea>
+      <button type="submit" class="message-submit" (click)="insertMessage()">Send</button>
+    </div>
+  </div>
+  <div class="bg"></div>
+</div>
+
+
+  
